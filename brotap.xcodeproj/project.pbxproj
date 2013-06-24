@@ -19,6 +19,7 @@
 		32D71A701777B41C002522CE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A6E1777B41C002522CE /* MainStoryboard_iPhone.storyboard */; };
 		32D71A731777B41C002522CE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A711777B41C002522CE /* MainStoryboard_iPad.storyboard */; };
 		32D71A761777B41C002522CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D71A751777B41C002522CE /* ViewController.m */; };
+		916BC54109D74D0882AE725C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B57B2BE53C43E4B81480FE /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		32D71A721777B41C002522CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		32D71A741777B41C002522CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		32D71A751777B41C002522CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35B57B2BE53C43E4B81480FE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		414904AF2E894230B7971116 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,7 @@
 				32D71A571777B41C002522CE /* UIKit.framework in Frameworks */,
 				32D71A591777B41C002522CE /* Foundation.framework in Frameworks */,
 				32D71A5B1777B41C002522CE /* CoreGraphics.framework in Frameworks */,
+				916BC54109D74D0882AE725C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 				32D71A5C1777B41C002522CE /* brotap */,
 				32D71A551777B41C002522CE /* Frameworks */,
 				32D71A541777B41C002522CE /* Products */,
+				414904AF2E894230B7971116 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +83,7 @@
 				32D71A561777B41C002522CE /* UIKit.framework */,
 				32D71A581777B41C002522CE /* Foundation.framework */,
 				32D71A5A1777B41C002522CE /* CoreGraphics.framework */,
+				35B57B2BE53C43E4B81480FE /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32D71A791777B41C002522CE /* Build configuration list for PBXNativeTarget "brotap" */;
 			buildPhases = (
+				2317E479444046A59BC092DC /* Check Pods Manifest.lock */,
 				32D71A4F1777B41C002522CE /* Sources */,
 				32D71A501777B41C002522CE /* Frameworks */,
 				32D71A511777B41C002522CE /* Resources */,
+				E8BDA15F2C034C2C9BBD16EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +179,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2317E479444046A59BC092DC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		E8BDA15F2C034C2C9BBD16EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32D71A4F1777B41C002522CE /* Sources */ = {
@@ -273,6 +312,7 @@
 		};
 		32D71A7A1777B41C002522CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 414904AF2E894230B7971116 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brotap/brotap-Prefix.pch";
@@ -284,6 +324,7 @@
 		};
 		32D71A7B1777B41C002522CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 414904AF2E894230B7971116 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "brotap/brotap-Prefix.pch";
@@ -312,6 +353,7 @@
 				32D71A7B1777B41C002522CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
