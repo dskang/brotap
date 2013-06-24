@@ -1,0 +1,14 @@
+PODS:
+  - Bump (3.0)
+
+DEPENDENCIES:
+  - Bump (from `podspecs/Bump.podspec`)
+
+EXTERNAL SOURCES:
+  Bump:
+    :podspec: podspecs/Bump.podspec
+
+SPEC CHECKSUMS:
+  Bump: 27975f753ccc9a6a3405c17989392f8e416ede80
+
+COCOAPODS: 0.20.2
