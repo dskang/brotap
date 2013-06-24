@@ -16,12 +16,10 @@
 
 
 - (IBAction)toggleButtonClick:(id)sender {
-    if (_fbWebView.hidden == NO)
-    {
+    if (_fbWebView.hidden == NO) {
         _fbWebView.hidden = YES;
     }
-    else
-    {
+    else {
         _fbWebView.hidden = NO;
     }
 }
@@ -62,9 +60,12 @@
                            "brotap_addFriend(brotap_url);"];
     NSLog(@"addFriend: %@", addFriend);
 
-
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [cookieJar cookies]) {
+        NSLog(@"%@", cookie);
+    }
 }
-
 
 @end
 

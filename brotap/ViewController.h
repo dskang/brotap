@@ -10,11 +10,7 @@
 
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
-// fbWebView
-@property (strong, nonatomic) IBOutlet UIWebView *fbWebView;
-
-
-// toggleButton
-@property (strong, nonatomic) IBOutlet UIButton *toggleButton;
+@property (weak, nonatomic) IBOutlet UIWebView *fbWebView;
+@property (weak, nonatomic) IBOutlet UIButton *toggleButton;
 
 @end
