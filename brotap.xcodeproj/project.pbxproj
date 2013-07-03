@@ -17,7 +17,6 @@
 		32D71A6B1777B41C002522CE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A6A1777B41C002522CE /* Default@2x.png */; };
 		32D71A6D1777B41C002522CE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A6C1777B41C002522CE /* Default-568h@2x.png */; };
 		32D71A701777B41C002522CE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A6E1777B41C002522CE /* MainStoryboard_iPhone.storyboard */; };
-		32D71A731777B41C002522CE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D71A711777B41C002522CE /* MainStoryboard_iPad.storyboard */; };
 		32D71A761777B41C002522CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D71A751777B41C002522CE /* ViewController.m */; };
 		916BC54109D74D0882AE725C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B57B2BE53C43E4B81480FE /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		32D71A6A1777B41C002522CE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		32D71A6C1777B41C002522CE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		32D71A6F1777B41C002522CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		32D71A721777B41C002522CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		32D71A741777B41C002522CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		32D71A751777B41C002522CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		35B57B2BE53C43E4B81480FE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 				32D71A651777B41C002522CE /* AppDelegate.h */,
 				32D71A661777B41C002522CE /* AppDelegate.m */,
 				32D71A6E1777B41C002522CE /* MainStoryboard_iPhone.storyboard */,
-				32D71A711777B41C002522CE /* MainStoryboard_iPad.storyboard */,
 				32D71A741777B41C002522CE /* ViewController.h */,
 				32D71A751777B41C002522CE /* ViewController.m */,
 				32D71A5D1777B41C002522CE /* Supporting Files */,
@@ -174,7 +171,6 @@
 				32D71A6B1777B41C002522CE /* Default@2x.png in Resources */,
 				32D71A6D1777B41C002522CE /* Default-568h@2x.png in Resources */,
 				32D71A701777B41C002522CE /* MainStoryboard_iPhone.storyboard in Resources */,
-				32D71A731777B41C002522CE /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,14 +235,6 @@
 				32D71A6F1777B41C002522CE /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		32D71A711777B41C002522CE /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				32D71A721777B41C002522CE /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,6 +306,7 @@
 				GCC_PREFIX_HEADER = "brotap/brotap-Prefix.pch";
 				INFOPLIST_FILE = "brotap/brotap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,6 +319,7 @@
 				GCC_PREFIX_HEADER = "brotap/brotap-Prefix.pch";
 				INFOPLIST_FILE = "brotap/brotap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
