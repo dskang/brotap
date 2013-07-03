@@ -16,11 +16,11 @@
 
 
 - (IBAction)toggleButtonClick:(id)sender {
-    if (_fbWebView.hidden == NO) {
-        _fbWebView.hidden = YES;
+    if (self.fbWebView.hidden == NO) {
+        self.fbWebView.hidden = YES;
     }
     else {
-        _fbWebView.hidden = NO;
+        self.fbWebView.hidden = NO;
     }
 }
 
@@ -32,15 +32,14 @@
 
 - (void)viewDidLoad
 {
-    _fbWebView.delegate = self;
-    //_fbWebView.hidden = YES;
+    self.fbWebView.delegate = self;
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSString *fullURL = @"http://m.facebook.com/danield";
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [_fbWebView loadRequest:requestObj];
+    [self.fbWebView loadRequest:requestObj];
 
 }
 
